@@ -17,8 +17,7 @@ export const talks: Talk[] = [
     date: 'July 24, 2025',
     description: 'Presenting research on high-frequency stock price forecasting using ensemble machine learning methods. Abstract: This paper explores the application of machine learning techniques for intraday stock price prediction using 2-minute frequency data.',
     links: {
-      paper: '/papers/stock-prediction-snpd2025.pdf',
-      slides: '/slides/snpd2025-presentation.pdf'
+      paper: 'https://drive.google.com/file/d/15Y2iSFWaMZfq9nw0TeIGCVy7vJNjnMcl/view?usp=sharing'
     }
   },
   {
@@ -27,7 +26,7 @@ export const talks: Talk[] = [
     date: 'April 26, 2025',
     description: 'A comprehensive exploration of artificial intelligence consciousness, ethical considerations in AI development, and the concept of technological singularity.',
     links: {
-      slides: '/slides/ai-ethics-presentation.pdf'
+      slides: 'https://drive.google.com/file/d/1DLqtaJ4BfPmEisozCO1OoXbMGVlU5LHh/view?usp=sharing'
     }
   }
 ];

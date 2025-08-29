@@ -52,6 +52,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
                 rel="noopener noreferrer"
                 className="text-muted hover:text-foreground transition-colors focus-ring p-1"
                 aria-label={`View ${project.title} live`}
+                title={project.links.live.includes('linkedin.com') ? 'View on LinkedIn' : 'View Live'}
               >
                 <ExternalLink className="h-4 w-4" />
               </Link>

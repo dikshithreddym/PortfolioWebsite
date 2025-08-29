@@ -16,8 +16,8 @@ export const projects: Project[] = [
     description: 'High-frequency AAPL forecasting using machine learning models. Achieved R²=0.9778 and MSE=0.0502 with ensemble methods combining Linear Regression, XGBoost, and LSTM.',
     tags: ['Python', 'Machine Learning', 'Time Series', 'XGBoost', 'LSTM', 'Research'],
     links: {
-      github: 'https://github.com/dikshithreddym/stock-prediction',
-      paper: '/papers/stock-prediction-snpd2025.pdf'
+      github: 'https://github.com/dikshithreddym/ResearchProject_StockPricePrediction',
+      paper: 'https://drive.google.com/file/d/15Y2iSFWaMZfq9nw0TeIGCVy7vJNjnMcl/view?usp=sharing'
     },
     featured: true
   },
@@ -26,35 +26,42 @@ export const projects: Project[] = [
     description: 'AI-powered waste sorting application that won HackTrent 2024 Best AI Project. Uses computer vision to classify and sort different types of waste for recycling.',
     tags: ['Python', 'Computer Vision', 'AI', 'Databricks', 'Hackathon'],
     links: {
-      github: 'https://github.com/dikshithreddym/ecosort-ai',
-      live: 'https://devpost.com/software/ecosort-ai'
+      live: 'https://www.linkedin.com/posts/dikshithreddym_hacktrent2024-databricks-aws-activity-7261748988758904833-mp39?utm_source=share&utm_medium=member_desktop'
     },
     featured: true
   },
   {
-    title: 'Cheese Fat Level Classification',
-    description: 'Machine learning model to classify cheese fat levels using image processing and feature extraction techniques.',
-    tags: ['Python', 'Machine Learning', 'Computer Vision', 'Classification'],
+    title: 'Applied AI/ML Course Project',
+    description: 'Final project for COIS-3550H Applied Artificial Intelligence and Machine Learning course at Trent University.',
+    tags: ['Python', 'Machine Learning', 'Jupyter', 'Academic'],
     links: {
-      github: 'https://github.com/dikshithreddym/cheese-classification'
+      github: 'https://github.com/dikshithreddym/COIS-3550H-AppliedArtificialIntelligenceAndMachineLearning'
     },
     featured: true
   },
   {
-    title: 'Mini X',
-    description: 'A compact Twitter-like social media platform built with modern web technologies.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Social Media'],
+    title: 'TwinMind Chrome Extension',
+    description: 'AI-powered transcription Chrome extension with real-time processing and speaker identification using Deepgram and Whisper.',
+    tags: ['JavaScript', 'Chrome Extension', 'AI', 'Speech Recognition', 'Real-time'],
     links: {
-      github: 'https://github.com/dikshithreddym/mini-x',
-      live: 'https://mini-x.vercel.app'
+      github: 'https://github.com/dikshithreddym/TwinMind_Chrome_Extension'
+    },
+    featured: true
+  },
+  {
+    title: 'TourPlan Website',
+    description: 'A comprehensive travel planning website built with modern web technologies.',
+    tags: ['Web Development', 'HTML', 'CSS', 'JavaScript'],
+    links: {
+      live: 'https://dikshithreddym.github.io/TourPlan_Website/'
     }
   },
   {
-    title: 'TwinMind Transcriber',
-    description: 'AI-powered transcription tool with real-time processing and speaker identification.',
-    tags: ['Python', 'AI', 'Speech Recognition', 'Real-time'],
+    title: 'Assignment 3 - Web Development',
+    description: 'Web development assignment showcasing frontend skills and responsive design.',
+    tags: ['Web Development', 'HTML', 'CSS', 'JavaScript'],
     links: {
-      github: 'https://github.com/dikshithreddym/twinmind-transcriber'
+      live: 'https://loki.trentu.ca/~dmacherla/www_data/Assignment-3'
     }
   }
 ];
