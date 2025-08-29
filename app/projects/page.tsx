@@ -43,10 +43,10 @@ export default function ProjectsPage() {
               <button
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors focus-ring ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 focus-ring border ${
                   selectedTags.includes(tag)
-                    ? 'bg-accent text-background'
-                    : 'bg-muted text-foreground hover:bg-muted/80'
+                    ? 'bg-gradient-to-r from-accent to-green-400 text-background border-accent shadow-lg shadow-accent/25'
+                    : 'bg-background text-foreground border-border hover:bg-muted/20 hover:border-accent/50 hover:shadow-md'
                 }`}
               >
                 {tag}
@@ -55,12 +55,12 @@ export default function ProjectsPage() {
           </div>
           
           {selectedTags.length > 0 && (
-            <div className="text-center mt-4">
+            <div className="text-center mt-6">
               <button
                 onClick={() => setSelectedTags([])}
-                className="text-sm text-accent hover:text-accent/80 transition-colors focus-ring"
+                className="px-4 py-2 rounded-full text-sm font-medium bg-red-500/10 text-red-400 border border-red-500/30 hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-200 focus-ring"
               >
-                Clear filters
+                Clear all filters
               </button>
             </div>
           )}
