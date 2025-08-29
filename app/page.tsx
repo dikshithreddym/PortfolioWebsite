@@ -19,19 +19,28 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <Section className="pt-24 pb-16 md:pt-32 md:pb-24">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
-              Dikshith Reddy Macherla
-            </h1>
-            <p className="text-sm text-muted mb-2">He/Him</p>
-            <p className="text-xl md:text-2xl text-muted leading-relaxed max-w-3xl mx-auto">
-              B.Sc. Computer Science @ Trent | ML & Data Science | Research Intern | Hackathon Winner | Dean&apos;s Honour Roll
-            </p>
-            <p className="text-muted mt-4">Toronto, Ontario, Canada</p>
-          </div>
+             {/* Hero Section */}
+       <Section className="pt-24 pb-16 md:pt-32 md:pb-24">
+         <div className="max-w-4xl mx-auto text-center">
+           <div className="mb-8">
+             {/* Profile Image */}
+             <div className="mb-8">
+               <img
+                 src="/profile.jpeg"
+                 alt="Dikshith Reddy Macherla"
+                 className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-accent/20 shadow-lg"
+               />
+             </div>
+             
+             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+               Dikshith Reddy Macherla
+             </h1>
+             <p className="text-sm text-muted mb-2">He/Him</p>
+             <p className="text-xl md:text-2xl text-muted leading-relaxed max-w-3xl mx-auto">
+               B.Sc. Computer Science @ Trent | ML & Data Science | Research Intern | Hackathon Winner | Dean&apos;s Honour Roll
+             </p>
+             <p className="text-muted mt-4">Toronto, Ontario, Canada</p>
+           </div>
 
           {/* Achievement Pills */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
