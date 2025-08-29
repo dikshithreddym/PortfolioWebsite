@@ -6,6 +6,8 @@ import { ProjectCard } from '@/components/ProjectCard';
 import { Tag } from '@/components/Tag';
 import { Card } from '@/components/Card';
 import { TimelineItem } from '@/components/TimelineItem';
+
+import { Testimonials } from '@/components/Testimonials';
 import { socials } from '@/content/socials';
 import { projects } from '@/content/projects';
 import { awards } from '@/content/awards';
@@ -28,22 +30,22 @@ export default function HomePage() {
                <img
                  src="/profile.jpeg"
                  alt="Dikshith Reddy Macherla"
-                 className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-accent/20 shadow-lg"
+                 className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-accent/20 shadow-lg animate-fade-in"
                />
              </div>
              
-             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 animate-slide-up">
                Dikshith Reddy Macherla
              </h1>
-             <p className="text-sm text-muted mb-2">He/Him</p>
-             <p className="text-xl md:text-2xl text-muted leading-relaxed max-w-3xl mx-auto">
+             <p className="text-sm text-muted mb-2 animate-slide-up" style={{ animationDelay: '0.1s' }}>He/Him</p>
+             <p className="text-xl md:text-2xl text-muted leading-relaxed max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
                B.Sc. Computer Science @ Trent | ML & Data Science | Research Intern | Hackathon Winner | Dean&apos;s Honour Roll
              </p>
-             <p className="text-muted mt-4">Toronto, Ontario, Canada</p>
+             <p className="text-muted mt-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>Toronto, Ontario, Canada</p>
            </div>
 
           {/* Achievement Pills */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <div className="flex flex-wrap justify-center gap-3 mb-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
             {awards.map((award) => (
               <Tag key={award.title} variant="accent" size="md">
                 {award.title}
@@ -52,7 +54,7 @@ export default function HomePage() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.5s' }}>
             <Button asChild size="lg">
               <Link href="/contact" className="flex items-center">
                 <Mail className="mr-2 h-5 w-5" />
@@ -86,8 +88,10 @@ export default function HomePage() {
         </div>
       </Section>
 
+
+
       {/* Featured Projects Section */}
-      <Section>
+      <Section className="bg-muted/20" animate animation="slide-up" delay={200}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -104,18 +108,18 @@ export default function HomePage() {
              ))}
            </div>
 
-          <div className="text-center mt-12">
-            <Button asChild variant="outline">
-              <Link href="/projects">
-                View All Projects
-              </Link>
-            </Button>
-          </div>
+                     <div className="text-center mt-12">
+             <Button asChild variant="outline">
+               <Link href="/projects">
+                 View All Projects
+               </Link>
+             </Button>
+           </div>
         </div>
       </Section>
 
       {/* Experience Section */}
-      <Section className="bg-muted/20">
+      <Section animate animation="slide-up" delay={400}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -146,6 +150,21 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* Testimonials Section */}
+      <Section className="bg-muted/20" animate animation="slide-up" delay={600}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Recommendations
+            </h2>
+            <p className="text-muted max-w-2xl mx-auto">
+              What colleagues and mentors say about working with me.
+            </p>
+          </div>
+          <Testimonials />
+        </div>
+      </Section>
+
       {/* Talks Section */}
       <Section>
         <div className="max-w-4xl mx-auto">
@@ -160,7 +179,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {featuredTalks.map((talk) => (
-              <Card key={talk.title} className="p-6">
+              <Card key={talk.title} className="p-6 hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 hover:-translate-y-1 transform-gpu">
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -225,7 +244,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Contact Information */}
-            <Card className="p-6">
+            <Card className="p-6 hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 hover:-translate-y-1 transform-gpu">
               <h3 className="text-xl font-semibold text-foreground mb-6">
                 Contact Information
               </h3>
@@ -268,7 +287,7 @@ export default function HomePage() {
             </Card>
 
                          {/* Social Links */}
-             <Card className="p-6">
+             <Card className="p-6 hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 hover:-translate-y-1 transform-gpu">
                <h3 className="text-xl font-semibold text-foreground mb-6">
                  Connect
                </h3>

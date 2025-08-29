@@ -1,13 +1,24 @@
 import { cn } from '@/lib/utils';
+import { AnimatedSection } from './AnimatedSection';
 
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
   id?: string;
+  animate?: boolean;
+  animation?: 'fade-in' | 'slide-up' | 'slide-left' | 'slide-right';
+  delay?: number;
 }
 
-export function Section({ children, className, id }: SectionProps) {
-  return (
+export function Section({ 
+  children, 
+  className, 
+  id, 
+  animate = false,
+  animation = 'fade-in',
+  delay = 0
+}: SectionProps) {
+  const content = (
     <section 
       id={id}
       className={cn(
@@ -20,4 +31,14 @@ export function Section({ children, className, id }: SectionProps) {
       </div>
     </section>
   );
+
+  if (animate) {
+    return (
+      <AnimatedSection animation={animation} delay={delay}>
+        {content}
+      </AnimatedSection>
+    );
+  }
+
+  return content;
 }
