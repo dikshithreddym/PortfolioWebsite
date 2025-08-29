@@ -258,44 +258,43 @@ export default function HomePage() {
               </div>
             </Card>
 
-            {/* Social Links */}
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold text-foreground mb-6">
-                Connect
-              </h3>
-              
-              <div className="space-y-4">
-                <a
-                  href={socials.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-foreground hover:text-accent transition-colors focus-ring"
-                >
-                  <Github className="h-5 w-5" />
-                  <span>GitHub</span>
-                </a>
-                
-                <a
-                  href={socials.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-foreground hover:text-accent transition-colors focus-ring"
-                >
-                  <Linkedin className="h-5 w-5" />
-                  <span>LinkedIn</span>
-                </a>
-              </div>
-            </Card>
-          </div>
-
-          <div className="text-center mt-8">
-            <Button asChild size="lg">
-              <Link href="/contact">
-                <Mail className="mr-2 h-5 w-5" />
-                Send Message
-              </Link>
-            </Button>
-          </div>
+                         {/* Social Links */}
+             <Card className="p-6">
+               <h3 className="text-xl font-semibold text-foreground mb-6">
+                 Connect
+               </h3>
+               
+               <div className="space-y-4">
+                 <Link
+                   href="/contact"
+                   className="flex items-center gap-3 text-foreground hover:text-accent transition-colors focus-ring"
+                 >
+                   <Mail className="h-5 w-5" />
+                   <span>Send Message</span>
+                 </Link>
+                 
+                 <a
+                   href={socials.github}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="flex items-center gap-3 text-foreground hover:text-accent transition-colors focus-ring"
+                 >
+                   <Github className="h-5 w-5" />
+                   <span>GitHub</span>
+                 </a>
+                 
+                 <a
+                   href={socials.linkedin}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="flex items-center gap-3 text-foreground hover:text-accent transition-colors focus-ring"
+                 >
+                   <Linkedin className="h-5 w-5" />
+                   <span>LinkedIn</span>
+                 </a>
+               </div>
+             </Card>
+           </div>
         </div>
       </Section>
     </>
