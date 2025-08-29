@@ -89,11 +89,11 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
-          </div>
+                     <div className="grid grid-cols-1 gap-6 max-w-2xl mx-auto">
+             {featuredProjects.map((project) => (
+               <ProjectCard key={project.title} project={project} />
+             ))}
+           </div>
 
           <div className="text-center mt-12">
             <Button asChild variant="outline">
