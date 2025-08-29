@@ -15,7 +15,7 @@ import { experience } from '@/content/experience';
 import { talks } from '@/content/talks';
 
 export default function HomePage() {
-  const featuredProjects = projects.filter(project => project.featured);
+  const featuredProjects = projects.filter(project => project.featured).slice(0, 3); // Show only first 3 featured projects
   const featuredExperience = experience.slice(0, 2); // Show first 2 experiences
   const featuredTalks = talks.slice(0, 2); // Show first 2 talks
 

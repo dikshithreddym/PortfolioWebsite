@@ -27,6 +27,23 @@ export function Testimonials() {
     <div className="space-y-8">
       {/* Testimonials Display */}
       <div className="relative">
+        {/* Navigation Arrows - Outside the card */}
+        <button
+          onClick={prevTestimonial}
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 p-3 rounded-full bg-background border border-border text-muted hover:text-foreground hover:bg-muted/20 transition-all duration-200 focus-ring shadow-lg"
+          aria-label="Previous testimonial"
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </button>
+        
+        <button
+          onClick={nextTestimonial}
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 p-3 rounded-full bg-background border border-border text-muted hover:text-foreground hover:bg-muted/20 transition-all duration-200 focus-ring shadow-lg"
+          aria-label="Next testimonial"
+        >
+          <ChevronRight className="h-6 w-6" />
+        </button>
+
         <Card className="p-8 relative overflow-hidden">
           {/* Quote Icon */}
           <div className="absolute top-4 right-4 text-accent/20">
@@ -64,39 +81,23 @@ export function Testimonials() {
               </div>
             </div>
           </div>
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 border border-border text-muted hover:text-foreground hover:bg-background transition-all duration-200 focus-ring"
-            aria-label="Previous testimonial"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-          <button
-            onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 border border-border text-muted hover:text-foreground hover:bg-background transition-all duration-200 focus-ring"
-            aria-label="Next testimonial"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
         </Card>
+      </div>
 
-        {/* Dots Indicator */}
-        <div className="flex justify-center mt-6 space-x-2">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToTestimonial(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 focus-ring ${
-                index === currentIndex
-                  ? 'bg-accent'
-                  : 'bg-muted/30 hover:bg-muted/60'
-              }`}
-              aria-label={`Go to testimonial ${index + 1}`}
-            />
-          ))}
-        </div>
+      {/* Dots Indicator */}
+      <div className="flex justify-center mt-6 space-x-2">
+        {testimonials.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToTestimonial(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-200 focus-ring ${
+              index === currentIndex
+                ? 'bg-accent'
+                : 'bg-muted/30 hover:bg-muted/60'
+            }`}
+            aria-label={`Go to testimonial ${index + 1}`}
+          />
+        ))}
       </div>
 
       {/* Testimonials Summary */}
