@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   html {
@@ -45,13 +45,79 @@
   }
   
   .gradient-text {
+    @apply bg-gradient-to-r from-accent via-accent-secondary to-accent-blue bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-primary {
     @apply bg-gradient-to-r from-accent to-green-400 bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-secondary {
+    @apply bg-gradient-to-r from-accent-secondary to-purple-400 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-glass border border-glass-border backdrop-blur-md;
+  }
+  
+  .glass-card {
+    @apply bg-glass border border-glass-border backdrop-blur-md shadow-glass;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-lg;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+  
+  .section-divider {
+    @apply relative;
+  }
+  
+  .section-divider::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-accent to-transparent;
+  }
+  
+  .gradient-border {
+    @apply relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg p-px bg-gradient-to-r from-accent via-accent-secondary to-accent-blue;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s linear infinite;
   }
 }
 
