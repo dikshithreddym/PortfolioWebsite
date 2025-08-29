@@ -126,15 +126,15 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="space-y-8">
-            {featuredExperience.map((exp, index) => (
-              <TimelineItem 
-                key={exp.title} 
-                experience={exp} 
-                isLast={index === featuredExperience.length - 1}
-              />
-            ))}
-          </div>
+                     <div className="relative">
+             {featuredExperience.map((exp, index) => (
+               <TimelineItem 
+                 key={exp.title} 
+                 experience={exp} 
+                 isLast={index === featuredExperience.length - 1}
+               />
+             ))}
+           </div>
 
           <div className="text-center mt-12">
             <Button asChild variant="outline">
