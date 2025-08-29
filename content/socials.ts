@@ -3,6 +3,6 @@ export const socials = {
   linkedin: 'http://linkedin.com/in/dikshithreddym',
   email: 'dikshithreddymacherla@gmail.com',
   phone: '+1 (437) 559-8389',
-  resume: '/resume/DikshithReddy_Resume.pdf',
+  resume: 'https://drive.google.com/file/d/11OVOaZ0mVnEk_wwRPN2CAZaMbfzmvZW1/view?usp=sharing',
   oldSite: 'https://dikshithreddy.vercel.app/',
 } as const;
